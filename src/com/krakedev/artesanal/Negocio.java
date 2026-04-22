@@ -41,7 +41,7 @@ public class Negocio {
 		maquinaA.llenarMaquina();
 	}
 	//METODO CONSUMIR CERVEZA 
-	public void consumirCervezamaquinaACliente(Cliente cliente, double ml){
+	public void consumirCervezaMaquinaACliente(Cliente cliente, double ml){
 		double valor=maquinaA.servirCerveza(ml);
 		cliente.setTotalConsumido(cliente.getTotalConsumido()+valor);
 	}
