@@ -8,6 +8,11 @@ public class Maquina {
 	private double precioPorMl;
 	private double capacidadMaxima;
 	private double cantidadActual;
+	
+	//CONSTRUCTOR VACIO
+	public Maquina() {
+		//vacio o null
+	}
 
 	// CONSTRUCTOR CON PARAMETROS-* MOLDES
 	public Maquina(String nombreCerveza, String descripcion, double precioPorMl, double capacidadMaxima,String codigo) {
