@@ -8,6 +8,7 @@ public class Maquina {
 	private double precioPorMl;
 	private double capacidadMaxima;
 	private double cantidadActual;
+	private double cantidadDesperdicio;
 	
 	//CONSTRUCTOR VACIO
 	public Maquina() {
@@ -21,6 +22,7 @@ public class Maquina {
 		this.precioPorMl=precioPorMl;
 		this.capacidadMaxima=capacidadMaxima;
 		this.cantidadActual=0;
+		this.cantidadDesperdicio=0;
 		this.codigo=codigo;
 
 	}
@@ -33,13 +35,23 @@ public class Maquina {
 		this.capacidadMaxima=100000;
 		this.cantidadActual=0;
 		this.codigo=codigo;
+		this.cantidadDesperdicio=0;
 	}
 
 
 
 	// METODOS GET Y SET
+	
 	public String getNombreCerveza() {
 		return nombreCerveza;
+	}
+
+	public double getCantidadDesperdicio() {
+		return cantidadDesperdicio;
+	}
+
+	public void setCantidadDesperdicio(double cantidadDesperdicio) {
+		this.cantidadDesperdicio = cantidadDesperdicio;
 	}
 
 	public void setNombreCerveza(String nombreCerveza) {
@@ -80,7 +92,7 @@ public class Maquina {
 	// METDODO PARA IMPRIMIR
 	public void imprimir() {
 		String mensaje = "Nombre cerveza:" + nombreCerveza + ", Descripcion: " + descripcion + ", Precio por ML: "
-				+ precioPorMl + ", Capacidad maxima: " + capacidadMaxima + ", Cantidad actual: " + cantidadActual+ ", Codigo: "+codigo;
+				+ precioPorMl + ", Capacidad maxima: " + capacidadMaxima + ", Cantidad actual: " + cantidadActual+ ", Codigo: "+codigo+" Cantidad desperdiciada: "+cantidadDesperdicio;
 		System.out.println(mensaje);
 	}
 	
@@ -112,5 +124,12 @@ public class Maquina {
 			return 0;
 		}
 	}
-
+	
+	//METODO VACIAR MAQUINA
+	public void vaciarMaquina() {
+		this.cantidadDesperdicio=cantidadDesperdicio+cantidadActual;
+		this.cantidadActual=0;
+		
+	}
+	
 }

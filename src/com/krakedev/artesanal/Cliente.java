@@ -6,13 +6,14 @@ public class Cliente {
 	private String cedula;
 	private int codigo;
 	private double totalConsumido;
+	
 	//CONSTRUCTORES
 	public Cliente(String nombre, String cedula) {
 		this.nombre=nombre;
 		this.cedula=cedula;
 	}
 	
-	//METODOS GEY Y SET
+	//METODOS GEt Y SET
 	public String getNombre() {
 		return nombre;
 	}
